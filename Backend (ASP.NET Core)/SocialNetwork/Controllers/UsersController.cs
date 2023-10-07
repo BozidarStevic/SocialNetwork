@@ -36,6 +36,10 @@ namespace SocialNetwork.Controllers
             {
                 return BadRequest("Jedan od korisnika ne postoji u bazi.");
             }
+            if (follower.Id.Equals(followed.Id))
+            {
+                return BadRequest("Korisnik pokusava da zaprati sam sebe, sto nije dozvoljeno.");
+            }
 
             var result = await _userService.FollowUserAsync(follower.Id, followed.Id);
 
