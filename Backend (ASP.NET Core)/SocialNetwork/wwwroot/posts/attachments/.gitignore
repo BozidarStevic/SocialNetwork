@@ -1,0 +1,2 @@
+# Ignorisanje svih fajlova i pod-direktorijuma unutar 'attachments'
+attachments/*
