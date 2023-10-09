@@ -300,3 +300,4 @@ C:\Users\BozaNeca\Desktop\SocialNetwork\Backend (ASP.NET Core)\SocialNetwork\obj
 C:\Users\BozaNeca\Desktop\SocialNetwork\Backend (ASP.NET Core)\SocialNetwork\obj\Debug\net6.0\SocialNetwork.pdb
 C:\Users\BozaNeca\Desktop\SocialNetwork\Backend (ASP.NET Core)\SocialNetwork\obj\Debug\net6.0\SocialNetwork.genruntimeconfig.cache
 C:\Users\BozaNeca\Desktop\SocialNetwork\Backend (ASP.NET Core)\SocialNetwork\obj\Debug\net6.0\ref\SocialNetwork.dll
+C:\Users\BozaNeca\Desktop\SocialNetwork\Backend (ASP.NET Core)\SocialNetwork\bin\Debug\net6.0\SocialNetwork.staticwebassets.runtime.json

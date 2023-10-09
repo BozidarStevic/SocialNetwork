@@ -8,8 +8,8 @@ namespace SocialNetwork.Models
         public string? Text { get; set; }
         public int LikesCount { get; set; } = 0;
         public DateTime TimePosted { get; set; }
-        public double AverageRate { get; set; }
-        public int ViewsCount { get; set; }
+        public double AverageRate { get; set; } = 0;
+        public int ViewsCount { get; set; } = 0;
         public string? Location { get; set; }
 
         public string? UserId { get; set; }

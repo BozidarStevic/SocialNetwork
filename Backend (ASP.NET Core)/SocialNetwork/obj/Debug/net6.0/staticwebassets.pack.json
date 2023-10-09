@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png",
+      "PackagePath": "staticwebassets\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png"
+    },
+    {
+      "Id": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\a5713380-c658-475d-973c-ba20e09ba299_Screenshot (15).png",
+      "PackagePath": "staticwebassets\\posts\\attachments\\a5713380-c658-475d-973c-ba20e09ba299_Screenshot (15).png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SocialNetwork.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SocialNetwork.props",
+      "PackagePath": "build\\SocialNetwork.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SocialNetwork.props",
+      "PackagePath": "buildMultiTargeting\\SocialNetwork.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SocialNetwork.props",
+      "PackagePath": "buildTransitive\\SocialNetwork.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

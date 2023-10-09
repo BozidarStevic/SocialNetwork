@@ -12,7 +12,7 @@ using SocialNetwork.Data;
 namespace SocialNetwork.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231007162712_Migration1")]
+    [Migration("20231009145646_Migration1")]
     partial class Migration1
     {
         /// <inheritdoc />
@@ -189,7 +189,7 @@ namespace SocialNetwork.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PostId")
+                    b.Property<int>("PostId")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
@@ -522,9 +522,13 @@ namespace SocialNetwork.Migrations
 
             modelBuilder.Entity("SocialNetwork.Models.Attachment", b =>
                 {
-                    b.HasOne("SocialNetwork.Models.Post", null)
+                    b.HasOne("SocialNetwork.Models.Post", "Post")
                         .WithMany("Attachments")
-                        .HasForeignKey("PostId");
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
                 });
 
             modelBuilder.Entity("SocialNetwork.Models.Comment", b =>

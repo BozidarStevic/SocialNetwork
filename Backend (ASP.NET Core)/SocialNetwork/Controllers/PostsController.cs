@@ -28,7 +28,50 @@ namespace SocialNetwork.Controllers
             _userManager = userManager;
         }
 
-        
+        [Authorize(Roles = Roles.User)]
+        [HttpGet("{id}")]
+        public async Task<ActionResult<PostResponseDTO>> GetPost(int id)
+        {
+            var postResponseDTO = await _postService.GetPostByIdAsync(id);
+
+            if (postResponseDTO == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(postResponseDTO);
+        }
+
+        [Authorize(Roles = Roles.User)]
+        [HttpPost]
+        public async Task<ActionResult<PostResponseDTO>> CreatePost([FromForm] PostRequestDTO postRequestDTO)
+        {
+            if (postRequestDTO == null || postRequestDTO.Text == null || postRequestDTO.Text.Equals(""))
+            {
+                return BadRequest();
+            }
+            if (postRequestDTO.AttachemtsFiles != null)
+            {
+                if (postRequestDTO.AttachemtsFiles.Count > 4)
+                {
+                    return BadRequest();
+                }
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("Korisnik nije ulogovan.");
+            }
+
+            var postResponseDTO = await _postService.CreatePost(postRequestDTO, user);
+
+            if (postResponseDTO == null)
+            {
+                return UnprocessableEntity();
+            }
+            return CreatedAtAction(nameof(GetPost), new { id = postResponseDTO.Id }, postResponseDTO);
+        }
 
     }
 }

@@ -20,12 +20,15 @@ namespace SocialNetwork.Mapping
             //Post
             CreateMap<Post, PostRequestDTO>().ReverseMap();
             CreateMap<Post, PostResponseDTO>().ReverseMap();
+            CreateMap<PostResponseDTO, PostResponseDTOResp>().ReverseMap();
 
             //User
             CreateMap<User, UserRequestDTO>().ReverseMap();
             CreateMap<User, UserResponseDTO>().ReverseMap();
 
-            CreateMap<PostResponseDTO, PostResponseDTOResp>().ReverseMap();
+            //Attachment
+            CreateMap<Attachment, AttachmentResponseDTO>().ReverseMap();
+
         }
     }
 }
