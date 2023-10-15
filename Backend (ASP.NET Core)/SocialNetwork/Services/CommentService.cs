@@ -24,7 +24,28 @@ namespace SocialNetwork.Services
             _postRepository = postRepository;
         }
 
-        
+        public async Task<CommentResponseDTO> GetCommentByIdAsync(int id)
+        {
+            var comment = await _commentRepository.GetCommentByIdAsync(id);
+            if (comment == null) return null;
+
+            return _mapper.Map<CommentResponseDTO>(comment);
+        }
+
+        public async Task<CommentResponseDTO> AddCommentAsync(string userId, int postId, string text)
+        {
+            var comment = new Comment
+            {
+                UserId = userId,
+                User = await _userManager.FindByIdAsync(userId),
+                PostId = postId,
+                Post = await _postRepository.GetPostByIdAsync(postId),
+                Text = text,
+                TimePosted = DateTime.Now
+            };
+            Comment commentRet = await _commentRepository.AddCommentAsync(comment);
+            return _mapper.Map<CommentResponseDTO>(commentRet);
+        }
 
     }
 }

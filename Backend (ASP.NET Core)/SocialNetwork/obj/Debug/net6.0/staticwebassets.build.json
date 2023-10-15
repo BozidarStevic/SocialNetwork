@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h9dsheSI8Ry0eBBoL0bsjyMrDinbKQ9dYokd11HS6QA=",
+  "Hash": "TaR/46UaONtySVYvAnwv8NMK5wbPO9beuUtMoSsEVsA=",
   "Source": "SocialNetwork",
   "BasePath": "_content/SocialNetwork",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\posts\\attachments\\a5713380-c658-475d-973c-ba20e09ba299_Screenshot (15).png"
+    },
+    {
+      "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\dc0e2bfc-84d1-4839-aaf7-6879263081fd_nature-quotes-landscape-1648265299.jpg",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "posts/attachments/dc0e2bfc-84d1-4839-aaf7-6879263081fd_nature-quotes-landscape-1648265299.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\attachments\\dc0e2bfc-84d1-4839-aaf7-6879263081fd_nature-quotes-landscape-1648265299.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\f5177250-3cc7-4afa-aa2f-3e7bb643ffa0_WOPA160517_D056-resized.jpg",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "posts/attachments/f5177250-3cc7-4afa-aa2f-3e7bb643ffa0_WOPA160517_D056-resized.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\attachments\\f5177250-3cc7-4afa-aa2f-3e7bb643ffa0_WOPA160517_D056-resized.jpg"
     }
   ]
 }

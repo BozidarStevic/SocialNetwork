@@ -36,7 +36,7 @@ namespace SocialNetwork.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles=Roles.User)]
+        [Authorize(Roles = Roles.User)]
         public async Task<ActionResult<LabelResponseDTO>> CreateLabel(LabelRequestDTO labelRequestDTO)
         {
             if (!ModelState.IsValid)

@@ -18,7 +18,17 @@ namespace SocialNetwork.Repositories
             _collection = _context.Comments;
         }
 
-        
+        public async Task<Comment> GetCommentByIdAsync(int commentId)
+        {
+            return await _collection.Include(c => c.Post).Include(c => c.User).FirstOrDefaultAsync(c => c.Id == commentId);
+        }
+
+        public async Task<Comment> AddCommentAsync(Comment comment)
+        {
+            await _context.Comments.AddAsync(comment);
+            await _context.SaveChangesAsync();
+            return comment;
+        }
 
     }
 }
