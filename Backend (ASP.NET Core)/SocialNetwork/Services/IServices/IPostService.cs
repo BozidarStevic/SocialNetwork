@@ -7,6 +7,6 @@ namespace SocialNetwork.Services.IServices
     public interface IPostService
     {
         public Task<PostResponseDTO> GetPostByIdAsync(int id);
-        public Task<PostResponseDTO> CreatePost(PostRequestDTO post, User user);
+        public Task<PostResponseDTO> CreatePostAsync(PostRequestDTO post, User user);
     }
 }

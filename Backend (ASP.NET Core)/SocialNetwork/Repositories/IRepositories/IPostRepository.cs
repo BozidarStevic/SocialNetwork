@@ -6,6 +6,6 @@ namespace SocialNetwork.Repositories.IRepositories
     public interface IPostRepository
     {
         Task<Post> GetPostByIdAsync(int postId);
-        public Task<Post> CreatePost(Post post);
+        public Task<Post> CreatePostAsync(Post post);
     }
 }

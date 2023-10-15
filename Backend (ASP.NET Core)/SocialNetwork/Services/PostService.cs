@@ -39,7 +39,7 @@ namespace SocialNetwork.Services
             return _mapper.Map<PostResponseDTO>(post);
         }
 
-        public async Task<PostResponseDTO> CreatePost(PostRequestDTO postRequestDTO, User user)
+        public async Task<PostResponseDTO> CreatePostAsync(PostRequestDTO postRequestDTO, User user)
         {
             var post = _mapper.Map<Post>(postRequestDTO);
             
@@ -97,7 +97,7 @@ namespace SocialNetwork.Services
                 post.Labels = labels;
             }
             
-            var createdPost = await _postRepository.CreatePost(post);
+            var createdPost = await _postRepository.CreatePostAsync(post);
             return _mapper.Map<PostResponseDTO>(createdPost);
         }
 

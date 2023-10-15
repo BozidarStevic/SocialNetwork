@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\.gitignore",
+      "PackagePath": "staticwebassets\\posts\\attachments\\.gitignore"
+    },
+    {
       "Id": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png",
       "PackagePath": "staticwebassets\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png"
     },

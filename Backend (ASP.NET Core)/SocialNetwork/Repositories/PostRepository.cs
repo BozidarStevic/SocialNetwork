@@ -31,7 +31,7 @@ namespace SocialNetwork.Repositories
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<Post> CreatePost(Post post)
+        public async Task<Post> CreatePostAsync(Post post)
         {
             await _collection.AddAsync(post);
             await _context.SaveChangesAsync();

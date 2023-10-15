@@ -46,16 +46,9 @@ namespace SocialNetwork.Controllers
         [HttpPost]
         public async Task<ActionResult<PostResponseDTO>> CreatePost([FromForm] PostRequestDTO postRequestDTO)
         {
-            if (postRequestDTO == null || postRequestDTO.Text == null || postRequestDTO.Text.Equals(""))
+            if (postRequestDTO == null || !ModelState.IsValid)
             {
-                return BadRequest();
-            }
-            if (postRequestDTO.AttachemtsFiles != null)
-            {
-                if (postRequestDTO.AttachemtsFiles.Count > 4)
-                {
-                    return BadRequest();
-                }
+                return BadRequest(ModelState);
             }
 
             var user = await _userManager.GetUserAsync(User);
@@ -64,7 +57,7 @@ namespace SocialNetwork.Controllers
                 return NotFound("Korisnik nije ulogovan.");
             }
 
-            var postResponseDTO = await _postService.CreatePost(postRequestDTO, user);
+            var postResponseDTO = await _postService.CreatePostAsync(postRequestDTO, user);
 
             if (postResponseDTO == null)
             {

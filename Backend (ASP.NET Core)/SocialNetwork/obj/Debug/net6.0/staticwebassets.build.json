@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rxrrlhfR2bK6LcjR/lyJEEhiFRgHfhXCZvA7ZNnYjJE=",
+  "Hash": "h9dsheSI8Ry0eBBoL0bsjyMrDinbKQ9dYokd11HS6QA=",
   "Source": "SocialNetwork",
   "BasePath": "_content/SocialNetwork",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\.gitignore",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "posts/attachments/.gitignore",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\attachments\\.gitignore"
+    },
     {
       "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png",
       "SourceId": "SocialNetwork",
