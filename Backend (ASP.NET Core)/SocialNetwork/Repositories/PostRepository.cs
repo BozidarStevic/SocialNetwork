@@ -38,6 +38,16 @@ namespace SocialNetwork.Repositories
             return post;
         }
 
-
+        public async Task<List<Post>> GetAllPostsSortedByDateTimeAsync()
+        {
+            return await _collection
+                .Include(post => post.User)
+                .Include(post => post.Likes)
+                .Include(post => post.Attachments)
+                .Include(post => post.Labels)
+                .Include(post => post.Rates)
+                .Include(post => post.Views)
+                .OrderByDescending(p => p.TimePosted).ToListAsync();
+        }
     }
 }

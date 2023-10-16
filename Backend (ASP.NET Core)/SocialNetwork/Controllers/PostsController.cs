@@ -12,6 +12,7 @@ using SocialNetwork.Services;
 using SocialNetwork.Services.IServices;
 using System.Security.Claims;
 using SocialNetwork.Exceptions;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SocialNetwork.Controllers
 {
@@ -64,6 +65,15 @@ namespace SocialNetwork.Controllers
                 return UnprocessableEntity();
             }
             return CreatedAtAction(nameof(GetPost), new { id = postResponseDTO.Id }, postResponseDTO);
+        }
+
+        //[Authorize(Roles = Roles.User)]
+        [HttpGet("latest")]
+        public async Task<ActionResult<List<PostResponseDTO>>> GetAllPostsSortedByDateTime()
+        {
+            var postDTOs = await _postService.GetAllPostDTOsSortedByDateTimeAsync();
+
+            return (postDTOs != null) ? Ok(postDTOs) : NotFound("Nema trazenih postova!");
         }
 
     }

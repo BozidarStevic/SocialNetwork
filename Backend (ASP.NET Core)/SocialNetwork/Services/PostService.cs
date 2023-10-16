@@ -127,5 +127,10 @@ namespace SocialNetwork.Services
             return "/" + folderPath;
         }
 
+        public async Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync()
+        {
+            var posts = await _postRepository.GetAllPostsSortedByDateTimeAsync();
+            return _mapper.Map<List<PostResponseDTO>>(posts);
+        }
     }
 }

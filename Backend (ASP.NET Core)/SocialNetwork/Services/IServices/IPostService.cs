@@ -8,5 +8,6 @@ namespace SocialNetwork.Services.IServices
     {
         public Task<PostResponseDTO> GetPostByIdAsync(int id);
         public Task<PostResponseDTO> CreatePostAsync(PostRequestDTO post, User user);
+        public Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync();
     }
 }
