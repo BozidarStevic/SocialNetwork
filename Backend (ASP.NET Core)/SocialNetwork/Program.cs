@@ -104,6 +104,7 @@ builder.Services.AddScoped<ILikeRepository, LikeRepository>();
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ILabelRepository, LabelRepository>();
+builder.Services.AddScoped<IViewRepository, ViewRepository>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 

@@ -16,6 +16,7 @@ namespace SocialNetwork.Services
     public class PostService : IPostService
     {
         private readonly IPostRepository _postRepository;
+        private readonly IViewRepository _viewRepository;
         private readonly ILabelRepository _labelRepository;
         private readonly IMapper _mapper;
         private readonly UserManager<User> _userManager;
@@ -24,13 +25,15 @@ namespace SocialNetwork.Services
         public PostService(IPostRepository postRepository,
             ILabelRepository labelRepository,
             IMapper mapper, UserManager<User> userManager,
-            IWebHostEnvironment webHostEnvironment)
+            IWebHostEnvironment webHostEnvironment,
+            IViewRepository viewRepository)
         {
             _postRepository = postRepository;
             _labelRepository = labelRepository;
             _mapper = mapper;
             _userManager = userManager;
             _webHostEnvironment = webHostEnvironment;
+            _viewRepository = viewRepository;
         }
 
         public async Task<PostResponseDTO> GetPostByIdAsync(int id)
@@ -127,9 +130,18 @@ namespace SocialNetwork.Services
             return "/" + folderPath;
         }
 
-        public async Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync()
+        public async Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync(User user)
         {
             var posts = await _postRepository.GetAllPostsSortedByDateTimeAsync();
+            foreach (var post in posts)
+            {
+                var viewExist = await _viewRepository.findViewByUserAndPostAsync(post, user);
+                if (viewExist == null)
+                {
+                    await _viewRepository.CreateViewAsync(post, user);
+                }
+            }
+
             return _mapper.Map<List<PostResponseDTO>>(posts);
         }
     }

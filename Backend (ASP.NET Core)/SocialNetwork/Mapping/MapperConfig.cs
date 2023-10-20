@@ -20,6 +20,10 @@ namespace SocialNetwork.Mapping
             CreateMap<Label,  LabelRequestDTO>().ReverseMap();
             CreateMap<Label, LabelResponseDTO>().ReverseMap();
 
+            //View
+            //CreateMap<View, ViewRequestDTO>().ReverseMap();
+            CreateMap<View, ViewResponseDTO>().ReverseMap();
+
             //Post
             CreateMap<Post, PostRequestDTO>().ReverseMap();
             CreateMap<Post, PostResponseDTO>().ReverseMap();

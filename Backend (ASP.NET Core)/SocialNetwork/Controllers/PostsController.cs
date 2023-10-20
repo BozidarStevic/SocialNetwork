@@ -67,11 +67,12 @@ namespace SocialNetwork.Controllers
             return CreatedAtAction(nameof(GetPost), new { id = postResponseDTO.Id }, postResponseDTO);
         }
 
-        //[Authorize(Roles = Roles.User)]
+        [Authorize(Roles = Roles.User)]
         [HttpGet("latest")]
         public async Task<ActionResult<List<PostResponseDTO>>> GetAllPostsSortedByDateTime()
         {
-            var postDTOs = await _postService.GetAllPostDTOsSortedByDateTimeAsync();
+            var user = await _userManager.GetUserAsync(User);
+            var postDTOs = await _postService.GetAllPostDTOsSortedByDateTimeAsync(user);
 
             return (postDTOs != null) ? Ok(postDTOs) : NotFound("Nema trazenih postova!");
         }
