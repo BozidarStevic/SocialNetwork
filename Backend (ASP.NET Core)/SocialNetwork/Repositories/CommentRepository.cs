@@ -30,5 +30,17 @@ namespace SocialNetwork.Repositories
             return comment;
         }
 
+        public async Task UpdateCommentAsync(Comment comment)
+        {
+            _context.Entry(comment).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteCommentAsync(Comment comment)
+        {
+            _context.Comments.Remove(comment);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }

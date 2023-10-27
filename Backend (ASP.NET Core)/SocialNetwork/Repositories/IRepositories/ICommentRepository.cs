@@ -6,5 +6,7 @@ namespace SocialNetwork.Repositories.IRepositories
     {
         Task<Comment> GetCommentByIdAsync(int commentId);
         Task<Comment> AddCommentAsync(Comment comment);
+        Task UpdateCommentAsync(Comment comment);
+        Task DeleteCommentAsync(Comment comment);
     }
 }

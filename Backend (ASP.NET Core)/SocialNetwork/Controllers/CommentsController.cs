@@ -62,5 +62,55 @@ namespace SocialNetwork.Controllers
             }
         }
 
+        [Authorize(Roles = Roles.User)]
+        [HttpPatch("{commentId}")]
+        public async Task<IActionResult> UpdateCommentText(int commentId, [FromBody] CommentRequestDTO commentRequestDTO)
+        {
+            if (commentRequestDTO.Text == null || commentRequestDTO.Text.Equals(""))
+            {
+                return BadRequest("Nema teksta za izmenu!");
+            }
+            try
+            {
+                var currentUserId = _userManager.GetUserId(User);
+                await _commentService.UpdateCommentTextAsync(currentUserId, commentId, commentRequestDTO.Text);
+                return Ok();
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Došlo je do greške prilikom ažuriranja komentara.");
+            }
+        }
+
+        [HttpDelete("User/{commentId}")]
+        [Authorize(Roles = Roles.User)]
+        public async Task<IActionResult> DeleteComment(int commentId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("Korisnik nije ulogovan!");
+            }
+
+            var result = await _commentService.DeleteCommentAsync(commentId, user.Id);
+
+            if (result)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest("Brisanje komentara nije uspelo ili nemate pravo da obrišete ovaj komentar.");
+            }
+        }
+
     }
 }
