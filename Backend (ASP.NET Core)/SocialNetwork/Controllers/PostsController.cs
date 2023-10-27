@@ -111,5 +111,22 @@ namespace SocialNetwork.Controllers
 
         }
 
+        [Authorize(Roles = Roles.User)]
+        [HttpDelete("{postId}")]
+        public async Task<IActionResult> DeletePost(int postId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("Korisnik nije ulogovan.");
+            }
+            bool deleted = await _postService.DeletePostAsync(postId, user.Id);
+            if (deleted)
+            {
+                return Ok();
+            }
+            return BadRequest("Brisanje post-a nije uspelo! Post nije pronađen ili korisnik nema pravo da obriše post.");
+        }
+
     }
 }

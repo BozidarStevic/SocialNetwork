@@ -267,5 +267,17 @@ namespace SocialNetwork.Services
             post = await _postRepository.UpdatePostAsync(post);
             return _mapper.Map<PostResponseDTO>(post);
         }
+
+        public async Task<bool> DeletePostAsync(int postId, string userId)
+        {
+            var post = await _postRepository.GetPostByIdAsync(postId);
+
+            if (post != null && post.UserId == userId)
+            {
+                return await _postRepository.DeletePostAsync(post);
+            }
+
+            return false;
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace SocialNetwork.Repositories.IRepositories
         Task<Post> CreatePostAsync(Post post);
         Task<List<Post>> GetAllPostsSortedByDateTimeAsync();
         Task<Post> UpdatePostAsync(Post post);
+        Task<bool> DeletePostAsync(Post post);
     }
 }

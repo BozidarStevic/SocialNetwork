@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cp8LjFlFs9WtGSIi/n9f6DOdnp9AU0oezQgaVBh90Ko=",
+  "Hash": "LXRn/UKil6zV/2m7EvaGH7M953Wb+anBbYHEyTUVNgo=",
   "Source": "SocialNetwork",
   "BasePath": "_content/SocialNetwork",
   "Mode": "Default",
@@ -51,23 +51,6 @@
       "OriginalItemSpec": "wwwroot\\posts\\attachments\\369e56d3-80b1-45a5-ad4d-ace659334f40_malties-dog-pet-cute-picture-white-wallpaper-preview.jpg"
     },
     {
-      "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\3f4b2d53-a512-4784-bdcc-a93a9ba52c6b_nature-quotes-landscape.jpg",
-      "SourceId": "SocialNetwork",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\",
-      "BasePath": "_content/SocialNetwork",
-      "RelativePath": "posts/attachments/3f4b2d53-a512-4784-bdcc-a93a9ba52c6b_nature-quotes-landscape.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\posts\\attachments\\3f4b2d53-a512-4784-bdcc-a93a9ba52c6b_nature-quotes-landscape.jpg"
-    },
-    {
       "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png",
       "SourceId": "SocialNetwork",
       "SourceType": "Discovered",
@@ -83,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\posts\\attachments\\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png"
+    },
+    {
+      "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\76d4e58e-6851-4843-86c1-730e17e17dfe_nature-quotes-landscape.jpg",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "posts/attachments/76d4e58e-6851-4843-86c1-730e17e17dfe_nature-quotes-landscape.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\attachments\\76d4e58e-6851-4843-86c1-730e17e17dfe_nature-quotes-landscape.jpg"
     },
     {
       "Identity": "C:\\Users\\BozaNeca\\Desktop\\SocialNetwork\\Backend (ASP.NET Core)\\SocialNetwork\\wwwroot\\posts\\attachments\\a5713380-c658-475d-973c-ba20e09ba299_Screenshot (15).png",

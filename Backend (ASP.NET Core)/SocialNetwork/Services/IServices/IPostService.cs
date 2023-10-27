@@ -10,5 +10,6 @@ namespace SocialNetwork.Services.IServices
         Task<PostResponseDTO> CreatePostAsync(PostRequestDTO post, User user);
         Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync(User user);
         Task<PostResponseDTO> UpdatePostAsync(string currentUserId, int postId, UpdatePostDTO updatePostDTO);
+        public Task<bool> DeletePostAsync(int postId, string userId);
     }
 }
