@@ -49,5 +49,53 @@ namespace SocialNetwork.Repositories
                 .Include(post => post.Views)
                 .OrderByDescending(p => p.TimePosted).ToListAsync();
         }
+
+        public async Task<Post> UpdatePostAsync(Post post)
+        {
+            try
+            {
+                _context.Entry(post).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+                //var areAttachmentsSavedInDB = true;
+                //var listOfUnsavedAttachments = new List<Attachment>();
+
+                //if (post.Attachments != null && post.Attachments.Any())
+                //{
+                //    foreach (var a in post.Attachments)
+                //    {
+                //        if (a.Id == 0)
+                //        {
+                //            areAttachmentsSavedInDB = false;
+                //            listOfUnsavedAttachments.Add(a);
+                //        }
+                //    }
+                //}
+
+                //if (areAttachmentsSavedInDB == false)
+                //{
+                //    foreach (var a in listOfUnsavedAttachments)
+                //    {
+                //        var at = new Attachment
+                //        {
+                //            Name = a.Name,
+                //            Post = a.Post,
+                //            PostId = a.PostId,
+                //            Type = a.Type,
+                //            Url = a.Url
+                //        };
+                //        _context.Entry(at).State = EntityState.Added;
+                //    }
+                //}
+                //await _context.SaveChangesAsync();
+
+                return post;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Izuzetak pri UpdatePostAsync u Repository" + ex.Message);
+                return post;
+            }
+        }
     }
 }

@@ -11,20 +11,20 @@ namespace SocialNetwork.Models
         public string? LastName { get; set; }
 
         [JsonIgnore]
-        public ICollection<FollowingUser>? Following { get; set; }
+        public ICollection<FollowingUser>? Following { get; set; } = new List<FollowingUser>();
         [JsonIgnore]
-        public ICollection<FollowingUser>? Followers { get; set; }
-        
-        public ICollection<IdentityRole>? Roles { get; set; }
+        public ICollection<FollowingUser>? Followers { get; set; } = new List<FollowingUser>();
+
+        public ICollection<IdentityRole>? Roles { get; set; } = new List<IdentityRole>();
         [JsonIgnore]
-        public ICollection<Post>? Posts { get; set; }
+        public ICollection<Post>? Posts { get; set; } = new List<Post>();
         [JsonIgnore]
-        public ICollection<Like>? Likes { get; set; }
+        public ICollection<Like>? Likes { get; set; } = new List<Like>();
         [JsonIgnore]
-        public ICollection<Comment>? Comments { get; set; }
+        public ICollection<Comment>? Comments { get; set; } = new List<Comment>();
         [JsonIgnore]
-        public ICollection<Rate>? Rates { get; set; }
+        public ICollection<Rate>? Rates { get; set; } = new List<Rate>();
         [JsonIgnore]
-        public ICollection<View>? Views { get; set; }
+        public ICollection<View>? Views { get; set; } = new List<View>();
     }
 }

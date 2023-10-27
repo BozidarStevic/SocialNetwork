@@ -18,17 +18,17 @@ namespace SocialNetwork.Models
 
 
         [JsonIgnore]
-        public ICollection<Like>? Likes { get; set; }
+        public ICollection<Like>? Likes { get; set; } = new List<Like>();
         [JsonIgnore]
-        public ICollection<Comment>? Comments { get; set; }
+        public ICollection<Comment>? Comments { get; set; } = new List<Comment>();
         [JsonIgnore]
-        public ICollection<Attachment>? Attachments { get; set; }
+        public ICollection<Attachment>? Attachments { get; set; } = new List<Attachment>();
         [JsonIgnore]
-        public ICollection<Label>? Labels { get; set; }
+        public ICollection<Label>? Labels { get; set; } = new List<Label>();
         [JsonIgnore]
-        public ICollection<Rate>? Rates { get; set; }
+        public ICollection<Rate>? Rates { get; set; } = new List<Rate>();
         [JsonIgnore]
-        public ICollection<View>? Views { get; set; }
+        public ICollection<View>? Views { get; set; } = new List<View>();
 
     }
 }

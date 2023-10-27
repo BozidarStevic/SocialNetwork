@@ -5,7 +5,7 @@ namespace SocialNetwork.Services.IServices
 {
     public interface ICommentService
     {
-        public Task<CommentResponseDTO> GetCommentByIdAsync(int id);
-        public Task<CommentResponseDTO> AddCommentAsync(string userId, int postId, string text);
+        Task<CommentResponseDTO> GetCommentByIdAsync(int id);
+        Task<CommentResponseDTO> AddCommentAsync(string userId, int postId, string text);
     }
 }

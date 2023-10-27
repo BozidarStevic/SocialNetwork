@@ -77,5 +77,39 @@ namespace SocialNetwork.Controllers
             return (postDTOs != null) ? Ok(postDTOs) : NotFound("Nema trazenih postova!");
         }
 
+        [Authorize(Roles = Roles.User)]
+        [HttpPut("update/{postId}")]
+        public async Task<ActionResult<PostResponseDTO>> UpdatePost(int postId, [FromForm] UpdatePostDTO updatePostDTO)
+        {
+            if (updatePostDTO == null || !ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
+            try
+            {
+                var currentUserId = _userManager.GetUserId(User);
+                var uadatedPost = await _postService.UpdatePostAsync(currentUserId,postId, updatePostDTO);
+                return Ok(uadatedPost);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (BadHttpRequestException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
+        }
+
     }
 }

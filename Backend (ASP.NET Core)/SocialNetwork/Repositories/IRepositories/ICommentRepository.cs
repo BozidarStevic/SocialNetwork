@@ -4,7 +4,7 @@ namespace SocialNetwork.Repositories.IRepositories
 {
     public interface ICommentRepository
     {
-        public Task<Comment> GetCommentByIdAsync(int commentId);
-        public Task<Comment> AddCommentAsync(Comment comment);
+        Task<Comment> GetCommentByIdAsync(int commentId);
+        Task<Comment> AddCommentAsync(Comment comment);
     }
 }

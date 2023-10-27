@@ -8,7 +8,7 @@ namespace SocialNetwork.Models
         public string? Name { get; set; }
 
         [JsonIgnore]
-        public ICollection<Post>? Posts { get; set; }
+        public ICollection<Post>? Posts { get; set; } = new List<Post>();
 
     }
 }

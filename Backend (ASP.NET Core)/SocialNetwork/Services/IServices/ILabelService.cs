@@ -4,7 +4,7 @@ namespace SocialNetwork.Services.IServices
 {
     public interface ILabelService
     {
-        public Task<LabelResponseDTO> GetLabelByIdAsync(int id);
-        public Task<LabelResponseDTO> createLabelAsync(LabelRequestDTO labelRequestDTO);
+        Task<LabelResponseDTO> GetLabelByIdAsync(int id);
+        Task<LabelResponseDTO> createLabelAsync(LabelRequestDTO labelRequestDTO);
     }
 }

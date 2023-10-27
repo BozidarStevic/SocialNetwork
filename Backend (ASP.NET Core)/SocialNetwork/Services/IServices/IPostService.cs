@@ -6,8 +6,9 @@ namespace SocialNetwork.Services.IServices
 {
     public interface IPostService
     {
-        public Task<PostResponseDTO> GetPostByIdAsync(int id);
-        public Task<PostResponseDTO> CreatePostAsync(PostRequestDTO post, User user);
-        public Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync(User user);
+        Task<PostResponseDTO> GetPostByIdAsync(int id);
+        Task<PostResponseDTO> CreatePostAsync(PostRequestDTO post, User user);
+        Task<List<PostResponseDTO>> GetAllPostDTOsSortedByDateTimeAsync(User user);
+        Task<PostResponseDTO> UpdatePostAsync(string currentUserId, int postId, UpdatePostDTO updatePostDTO);
     }
 }

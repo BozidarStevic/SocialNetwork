@@ -8,5 +8,6 @@ namespace SocialNetwork.Repositories.IRepositories
         Task<Post> GetPostByIdAsync(int postId);
         Task<Post> CreatePostAsync(Post post);
         Task<List<Post>> GetAllPostsSortedByDateTimeAsync();
+        Task<Post> UpdatePostAsync(Post post);
     }
 }

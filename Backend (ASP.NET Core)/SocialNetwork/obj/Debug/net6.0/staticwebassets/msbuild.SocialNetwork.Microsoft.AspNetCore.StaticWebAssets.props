@@ -16,6 +16,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\.gitignore))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\369e56d3-80b1-45a5-ad4d-ace659334f40_malties-dog-pet-cute-picture-white-wallpaper-preview.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>SocialNetwork</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SocialNetwork</BasePath>
+      <RelativePath>posts/attachments/369e56d3-80b1-45a5-ad4d-ace659334f40_malties-dog-pet-cute-picture-white-wallpaper-preview.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\369e56d3-80b1-45a5-ad4d-ace659334f40_malties-dog-pet-cute-picture-white-wallpaper-preview.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\3f4b2d53-a512-4784-bdcc-a93a9ba52c6b_nature-quotes-landscape.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>SocialNetwork</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SocialNetwork</BasePath>
+      <RelativePath>posts/attachments/3f4b2d53-a512-4784-bdcc-a93a9ba52c6b_nature-quotes-landscape.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\3f4b2d53-a512-4784-bdcc-a93a9ba52c6b_nature-quotes-landscape.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\666fdef5-62a8-444a-9946-c7b921f78116_Screenshot (10).png))">
       <SourceType>Package</SourceType>
       <SourceId>SocialNetwork</SourceId>
@@ -47,22 +79,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\a5713380-c658-475d-973c-ba20e09ba299_Screenshot (15).png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\dc0e2bfc-84d1-4839-aaf7-6879263081fd_nature-quotes-landscape-1648265299.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>SocialNetwork</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/SocialNetwork</BasePath>
-      <RelativePath>posts/attachments/dc0e2bfc-84d1-4839-aaf7-6879263081fd_nature-quotes-landscape-1648265299.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\dc0e2bfc-84d1-4839-aaf7-6879263081fd_nature-quotes-landscape-1648265299.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\posts\attachments\f5177250-3cc7-4afa-aa2f-3e7bb643ffa0_WOPA160517_D056-resized.jpg))">
       <SourceType>Package</SourceType>
