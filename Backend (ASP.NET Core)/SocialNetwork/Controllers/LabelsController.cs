@@ -54,5 +54,17 @@ namespace SocialNetwork.Controllers
             return CreatedAtAction(nameof(GetLabel), new { id = labelResponseDTO.Id }, labelResponseDTO);
         }
 
+        [Authorize(Roles = Roles.User)]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<LabelResponseDTO>>> GetLabels()
+        {
+            var labelsResponseDTO = await _labelService.GetAllLabelsAsync();
+            if (labelsResponseDTO == null || !labelsResponseDTO.Any())
+            {
+                return NotFound();
+            }
+            return Ok(labelsResponseDTO);
+        }
+
     }
 }

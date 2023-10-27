@@ -34,5 +34,11 @@ namespace SocialNetwork.Services
             var createdLabel = await _labelRepository.CreateLabelAsync(label);
             return _mapper.Map<LabelResponseDTO>(createdLabel);
         }
+
+        public async Task<IEnumerable<LabelResponseDTO>> GetAllLabelsAsync()
+        {
+            IEnumerable<Label> labels = await _labelRepository.GetAllLabelsAsync();
+            return _mapper.Map<List<LabelResponseDTO>>(labels);
+        }
     }
 }

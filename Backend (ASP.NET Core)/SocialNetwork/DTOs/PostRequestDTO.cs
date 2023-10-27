@@ -17,6 +17,5 @@ namespace SocialNetwork.DTOs
         [MaxLength(4, ErrorMessage = "Maksimalno dozvoljen broj fajlova je 4.")]
         public IFormFileCollection? AttachemtsFiles { get; set; }
 
-
     }
 }

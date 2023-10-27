@@ -73,16 +73,16 @@ namespace SocialNetwork.Services
             {
                 return false;
             }
-            bool commentOnUsersPost = false;
+            bool isCommentOnUsersPost = false;
             foreach (var post in user.Posts)
             {
                 if (post.Id == comment.Post.Id)
                 {
-                    commentOnUsersPost = true;
+                    isCommentOnUsersPost = true;
                 }
             }
 
-            if (comment.User.Id == userId || commentOnUsersPost)
+            if (comment.User.Id == userId || isCommentOnUsersPost)
             {
                 await _commentRepository.DeleteCommentAsync(comment);
                 return true;

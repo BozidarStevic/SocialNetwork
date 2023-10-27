@@ -171,6 +171,12 @@ namespace SocialNetwork.Services
                 throw new NotFoundException("Post nije pronađen.");
             }
 
+            TimeSpan timeDifference = DateTime.Now - post.TimePosted;
+            if (timeDifference.TotalMinutes > 5)
+            {
+                throw new TimeoutException("Nije moguće ažurirati post nakon što istekne 5 min od kreiranja posta!");
+            }
+
             if (post.UserId != currentUserId)
             {
                 throw new UnauthorizedAccessException("Nemate dozvolu da ažurirate ovaj post.");

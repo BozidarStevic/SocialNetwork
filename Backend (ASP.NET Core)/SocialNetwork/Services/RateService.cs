@@ -25,6 +25,10 @@ namespace SocialNetwork.Services
         public async Task<PostResponseDTO> RatePostAsync(User user, int postId, int rateValue)
         {
             var post = await _postRepository.GetPostByIdAsync(postId);
+            if (user.Id == post.UserId)
+            {
+                return null;
+            }
             var rate = new Rate {
                 PostId = postId,
                 Post = post,

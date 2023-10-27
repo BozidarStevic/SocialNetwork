@@ -30,5 +30,10 @@ namespace SocialNetwork.Repositories
             await _context.SaveChangesAsync();
             return label;
         }
+
+        public async Task<IEnumerable<Label>> GetAllLabelsAsync()
+        {
+            return await _context.Labels.ToListAsync();
+        }
     }
 }

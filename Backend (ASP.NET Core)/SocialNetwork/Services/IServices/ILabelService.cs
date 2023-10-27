@@ -6,5 +6,6 @@ namespace SocialNetwork.Services.IServices
     {
         Task<LabelResponseDTO> GetLabelByIdAsync(int id);
         Task<LabelResponseDTO> createLabelAsync(LabelRequestDTO labelRequestDTO);
+        Task<IEnumerable<LabelResponseDTO>> GetAllLabelsAsync();
     }
 }

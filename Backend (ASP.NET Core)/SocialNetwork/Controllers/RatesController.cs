@@ -27,6 +27,10 @@ namespace SocialNetwork.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
             var postResponseDTO = await _rateService.RatePostAsync(user, postId, rateValue);
+            if (postResponseDTO == null)
+            {
+                return Unauthorized("Korisnik ne može da ocenjuje svoj post!");
+            }
             return Ok(postResponseDTO);
         }
 
